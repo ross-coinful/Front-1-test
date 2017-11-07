@@ -1,0 +1,23 @@
+{
+  "name": "front",
+  "version": "1.0.0",
+  "description": "* meow",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha #"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hoho1234578/Front.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/hoho1234578/Front/issues"
+  },
+  "homepage": "https://github.com/hoho1234578/Front#readme",
+  "devDependencies": {
+    "mocha": "^4.0.1",
+    "should": "^13.1.3"
+  }
+}
