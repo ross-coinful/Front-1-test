@@ -1,6 +1,6 @@
 // test/sum.js
 var should = require('should');
-var sum = require('../lib/sum');
+import { sum } from '../lib/sum';
 
 describe('#sum', function(){
     it('should return the sum of an array', function(done){

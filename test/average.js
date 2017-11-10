@@ -1,6 +1,7 @@
 // test/average.js
 var should = require('should');
-var average = require('../lib/average');
+// var average = require('../lib/average');
+import { average } from '../lib/average';
 
 describe('#average', function(){
     it('should return the average of array', function(done){

@@ -1,6 +1,7 @@
 // test/max.js
 var should = require('should');
-var max = require('../lib/max');
+// var max = require('../lib/max');
+import { max } from '../lib/max';
 
 describe('#max', function(){
     it('should return the maximum in array', function(done){

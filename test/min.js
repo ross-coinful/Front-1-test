@@ -1,6 +1,7 @@
 // test/min.js
 var should = require('should');
-var min = require('../lib/min');
+// var min = require('../lib/min');
+import { min } from '../lib/min';
 
 describe('#min', function(){
     it('should return the minimum in array', function(done){
