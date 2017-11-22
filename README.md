@@ -3,4 +3,5 @@
 
 * Unit test example using Mocha
 * Travis CI practice
+ * Branch whitelist
  * Build Stages (install, build, and test)
