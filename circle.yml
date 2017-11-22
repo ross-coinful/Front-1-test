@@ -1,6 +1,0 @@
-# circle.yml
-machine: # 虛擬機的環境
-  node:
-    version: 6.10.2
-  test:
-    - npm test  #每一個 deploy 到github上的 commit 都會執行 npm test
