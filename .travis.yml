@@ -10,14 +10,13 @@ stages:
   - build
   - test
 
-cache:
-  directories:
-    - "node_modules"
-
 jobs:
   include:
     - stage: install
       script: yarn install
+      cache:
+        directories:
+          - "node_modules"
     - stage: build
       script: npm run build
     - stage: test
