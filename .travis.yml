@@ -18,6 +18,7 @@ jobs:
       script: npm run build
     - stage: test
       script: npm run test
+      after_success: ./gen_bundle.sh
 
 notifications:
   email:
