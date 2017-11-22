@@ -14,9 +14,6 @@ jobs:
   include:
     - stage: install
       script: yarn install
-      # cache:
-      #   directories:
-      #     - "node_modules"
     - stage: build
       script: npm run build
     - stage: test
