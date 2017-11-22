@@ -5,12 +5,27 @@ node_js:
   # - "6"
   # - "5"
 
+stages:
+  - install
+  - build
+  - test
+
 cache:
   directories:
     - "node_modules"
 
-install:
-  - yarn install
+jobs:
+  include:
+    - stage: install
+      script: yarn install
+    - stage: build
+      script: npm run build
+    - stage: test
+      script: npm run test
 
-script:
-  - npm run build
+notifications:
+  email:
+    recipients:
+      - ho.ho@nogle.com
+    on_success: always
+    on_failure: always
