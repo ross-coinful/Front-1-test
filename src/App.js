@@ -4,6 +4,8 @@ import { average } from '../lib/average';
 // import { min } from './min';
 // import { sum } from './sum';
 
+//joijweif
+
 export default class App extends Component {
 
 	constructor(props) {

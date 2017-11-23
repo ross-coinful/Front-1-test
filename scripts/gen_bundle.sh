@@ -1,7 +1,7 @@
 
 # github info
 branch="bundle"
-repo="https://@github.com/hoho1234578/Front.git"
+repo="https://github.com/hoho1234578/Front.git"
 date=`date +%Y-%m-%d`
 commit_log="Generate bundle for testing on ${date}"
 
@@ -25,8 +25,7 @@ git commit -m "$commit_log"
 # git tag -a v${TRAVIS_BUILD_NUMBER} -m "Travis build $TRAVIS_BUILD_NUMBER pushed a tag."
 
 # Push
-git pull origin $branch
-git push origin $branch
+git push origin $branch -f
 
 # Remove build folder
 cd ..
