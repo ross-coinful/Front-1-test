@@ -3,7 +3,7 @@ language: node_js
 node_js:
   - '7'
 stages:
-  
+
   # - Install
   # - Build
   # - Test
@@ -35,7 +35,7 @@ jobs:
         #   - dist/bundle.js
         on:
           repo: hoho1234578/Front
-          branch: build
+          branch: bundle
           # tags: true
 
 notifications:
