@@ -19,12 +19,14 @@ jobs:
       script: yarn test
     - stage: GitHub release
       script: echo "Deploying to GitHub releases"
-      before_deploy: cd dist
+      # before_deploy:
+      #   - cd dist
       deploy:
         provider: releases
         api_key:
           secure: EtmWDZN5jNWNArJpa7GnO5SrGTvtgEd1irQHBxMaopHtU03luCBKoac4gEDb1bJPOqlcKUlqHTGBdAdLA142bplCj6yk5gYRR73fXwTw3Jx6HHFay4QDLaQaZbmyHHDx1mgiCVbBdi9+oPYQCl61ctB/oVKutePwL0sjtgqnZizKsd1++LkuLjfjyB2l0qpVieF/ZIRUvepaI8+9N1k620eGJAfOERCisNENSJDcvh7RmxJ2S972zjNy0EpzvutIz18igThL2nE9nJSLp5KnyLvtVOWjcptVWrGJmGHu0jS+kmwazCaRB0/61G+Fd7DkZiTi68SkuP6885P/7IhAyjSyOTY4p/7gJjO1td/ZpPzMJPspQIvOBLCTtZ2i2aibK4BkyJ2rILlmsQCZgFW1F6SXmANgNojkjTInGBBDL8y/rg0DV4RrHnjga93Cq9HgACmZ8xL1lLMcj9RpGGqb4vXGQisr8PDTJg9ixvGcKSn5BBi84WF3GYM+m1/SORbwoARCXnbo27yKGFjTzVy2VQQ4l7DpLVadRmq2lUF2pCNagbWjnwcTUtprZTsU9dn//RFs609jl+kxMsGJGIyoQKCUj3Aam0I+9VsYCdXlMiUJIWRNyk+g7aTLwhF2I5dQt1vmIIIUQxF511n+k1n60cJtNiYY5h4HSGatEKiHG0w=
         skip_cleanup: true
+        file: dist/*
         on:
           repo: hoho1234578/Front
           branch: dev
