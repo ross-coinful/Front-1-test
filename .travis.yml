@@ -6,19 +6,28 @@ node_js:
   # - "5"
 
 stages:
-  - install
-  - build
-  - test
+  - Install
+  - Build
+  - Test
+  - GitHub release
 
 jobs:
   include:
-    - stage: install
+    - stage: Install
       script: yarn install
-    - stage: build
+    - stage: Build
       script: yarn build
-    - stage: test
+    - stage: Test
       script: yarn test
-      after_success: ./gen_bundle.sh
+      # after_success: ./gen_bundle.sh
+    - stage: GitHub release
+      script: echo "Deploying to GitHub releases"
+      deploy:
+          provider: releases
+          api_key: $GITHUB_OAUTH_TOKEN
+          skip_cleanup: true
+          on:
+            tags; true
 
 notifications:
   email:
