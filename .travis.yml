@@ -21,7 +21,7 @@ jobs:
     #   script: yarn build
     - stage: Test
       script: yarn test
-      # after_success: ./gen_bundle.sh
+      after_success: ./gen_bundle.sh
     # - stage: GitHub release
       # script: echo "Deploying to GitHub releases"
       # before_deploy:
