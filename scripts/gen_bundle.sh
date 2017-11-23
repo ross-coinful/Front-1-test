@@ -1,7 +1,7 @@
 
 # github info
 branch="bundle"
-repo="https://${GH_TOKEN}:@github.com"
+repo="https://${GH_TOKEN}:@github.com/hoho1234578/Front.git"
 date=`date +%Y-%m-%d`
 commit_log="Generate bundle for testing on ${date}"
 
