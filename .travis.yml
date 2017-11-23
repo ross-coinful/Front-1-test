@@ -2,21 +2,21 @@ language: node_js
 node_js:
   - '7'
 stages:
-  - Install
-  - Build
-  - Test
+  # - Install
+  # - Build
+  # - Test
   - GitHub release
 cache:
   directories:
     - node_modules
 jobs:
   include:
-    - stage: Install
-      script: yarn install
-    - stage: Build
-      script: yarn build
-    - stage: Test
-      script: yarn test
+    # - stage: Install
+    #   script: yarn install
+    # - stage: Build
+    #   script: yarn build
+    # - stage: Test
+    #   script: yarn test
     - stage: GitHub release
       script: echo "Deploying to GitHub releases"
       # before_deploy:
