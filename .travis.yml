@@ -4,8 +4,8 @@ node_js:
   - '7'
 
 stages:
-  # - Install
-  # - Build
+  - Install
+  - Build
   - Test
   # - GitHub release
 
@@ -15,10 +15,10 @@ cache:
 
 jobs:
   include:
-    # - stage: Install
-    #   script: yarn install
-    # - stage: Build
-    #   script: yarn build
+    - stage: Install
+      script: yarn install
+    - stage: Build
+      script: yarn build
     - stage: Test
       script: yarn test
       after_success: ./gen_bundle.sh
