@@ -6,6 +6,9 @@ stages:
   - Build
   - Test
   - GitHub release
+cache:
+  directories:
+    - node_modules
 jobs:
   include:
     - stage: Install
