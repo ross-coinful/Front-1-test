@@ -4,8 +4,6 @@ import { average } from '../lib/average';
 // import { min } from './min';
 // import { sum } from './sum';
 
-// hellooooo
-
 export default class App extends Component {
 
 	constructor(props) {
