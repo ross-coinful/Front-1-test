@@ -9,7 +9,7 @@ stages:
   - Install
   - Build
   - Test
-  - GitHub release
+  # - GitHub release
 
 jobs:
   include:
@@ -20,14 +20,14 @@ jobs:
     - stage: Test
       script: yarn test
       # after_success: ./gen_bundle.sh
-    - stage: GitHub release
-      script: echo "Deploying to GitHub releases"
-      deploy:
-          provider: releases
-          api_key: $GITHUB_OAUTH_TOKEN
-          skip_cleanup: true
-          on:
-            tags; true
+    # - stage: GitHub release
+    #   script: echo "Deploying to GitHub releases"
+    #   deploy:
+    #       provider: releases
+    #       api_key: $GITHUB_OAUTH_TOKEN
+    #       skip_cleanup: true
+    #       on:
+    #         tags; true
 
 notifications:
   email:
