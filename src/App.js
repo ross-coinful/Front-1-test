@@ -4,7 +4,7 @@ import { average } from '../lib/average';
 // import { min } from './min';
 // import { sum } from './sum';
 
-// hello
+// hellooooo
 
 export default class App extends Component {
 
