@@ -22,7 +22,7 @@ echo $commit_log
 git commit -m "$commit_log"
 
 
-git tag -a v${TRAVIS_BUILD_NUMBER} -m "Travis build $TRAVIS_BUILD_NUMBER pushed a tag."
+# git tag -a v${TRAVIS_BUILD_NUMBER} -m "Travis build $TRAVIS_BUILD_NUMBER pushed a tag."
 
 # Push
 git push origin $branch -f
