@@ -5,8 +5,8 @@ repo="https://github.com/hoho1234578/Front.git"
 date=`date +%Y-%m-%d`
 commit_log="Generate bundle for testing on ${date}"
 
-git config --global user.email "hoho1234578@gmail.com"
-git config --global user.name "hoho1234578"
+# git config --global user.email "hoho1234578@gmail.com"
+# git config --global user.name "hoho1234578"
 
 rm -rf build
 git clone $repo --depth 1 -b $branch build # Depth 用於指定 clone 深度，為 1 表示只 clone 最近一次 commit
