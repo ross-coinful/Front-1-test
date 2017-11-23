@@ -10,6 +10,8 @@ jobs:
   include:
   - stage: Test
     before_script: 
+      - git config --global user.email "hoho1234578@gmail.com"
+      - git config --global user.name "hoho1234578"
     script: scripts/gen_bundle.sh
 notifications:
   email:
