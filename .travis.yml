@@ -1,16 +1,24 @@
 language: node_js
-
 node_js:
-  - "7"
-  # - "6"
-  # - "5"
-
+- '7'
+stages:
+- Test
 cache:
   directories:
-    - "node_modules"
-
-install:
-  - yarn install
-
-script:
-  - npm run build
+  - node_modules
+jobs:
+  include:
+  - stage: Test
+    # before_script:
+    # - git config --global user.email "hoho1234578@gmail.com"
+    # - git config --global user.name "hoho1234578"
+    script: scripts/gen_bundle.sh
+notifications:
+  email:
+    recipients:
+    - ho.ho@nogle.com
+    on_success: always
+    on_failure: always
+env:
+  global:
+    secure: GQGZDCh/ZL0hykS9JK1HeKPKSCmOgdaNAtLj52Y0dLfnOcro9d15RI3ew0Sl+J/qZwFF1Ggr9zJ2NYXa0liE7L55ioo2KBHgzQqX1N2IbQV/moi6GxPiyfWQDRREPU4CYUIu+uHYFFzaWzu1g42+CAC+74VDqQdNQqwWUREHieVH7OTEhz0L3IHJlbjdVEKDQgPVJ23C3ZBqQuzrH/lyEoRw1HmPRmftnmQoChAGbSSBykCSG4a+gbAAesLlWHmDia9ELPwVCRhfB/8NCUGKFcEWHxhJ4jGZvajT6usezn/X+UP/6BF6PS0tmKWj3QS79HJYo/xCWPfRSaxg43jY/ssHXGdHbxHqBtidVG+lEwzOxDeWQOj9JgCE7KEQzU3U6q2EPhmqeECRVrE1IenYb+BHm3Tz+pB1FGslTnGc+OsqBaNyAG8s0fCxPjmK7HwzHInsXCeYAqIL4XkrjtUI5twi+JIg4WZ57YM8wFhJrt0pifDuwc8hrNIbkWgF0qZU5xgKo1qY1NyMPDtWrtBV4AnP5fHRLFKnVx292FkNqEYArqDZJEXqp8n6kwqtO2dNH18qR9MAl4kANE3omp1wnPgNZ3HHwQhrhBgOD3rKTPnLYGFzYpgWms4msDsup8jt66wr4FfjPWYSyHk2dluoFAuZdgDbO0ysXPj1Mor/fwc=

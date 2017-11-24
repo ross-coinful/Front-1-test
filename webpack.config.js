@@ -1,7 +1,10 @@
+const HtmlWebpackPlugin = require('html-webpack-plugin');
+
 module.exports = {
-  entry: './src/index.js', // 要輸出的檔案入口
+  entry: __dirname + '/src/index.js', // 要輸出的檔案入口
   output: {
-    filename: './dist/bundle.js' //最終的目的檔案
+    path: __dirname + '/dist',
+    filename: 'bundle.js' //最終的目的檔案
   },
   module: {
   	rules: [
@@ -18,5 +21,6 @@ module.exports = {
   			],
   		}
   	]
-  }
+  },
+  plugins: [new HtmlWebpackPlugin()]
 }
