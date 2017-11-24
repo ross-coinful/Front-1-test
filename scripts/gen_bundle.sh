@@ -1,7 +1,9 @@
+git config --global user.email "hoho1234578@gmail.com"
+git config --global user.name "Travis CI"
 
 # github info
 branch="bundle"
-repo="git@github.com:hoho1234578/Front.git"
+repo="https://${GH_TOKEN}@github.com/hoho1234578/Front.git"
 date=`date +%Y-%m-%d`
 commit_log="Generate bundle for testing on ${date}"
 

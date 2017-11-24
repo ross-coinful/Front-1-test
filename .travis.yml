@@ -9,9 +9,9 @@ cache:
 jobs:
   include:
   - stage: Test
-    before_script: 
-      - git config --global user.email "hoho1234578@gmail.com"
-      - git config --global user.name "hoho1234578"
+    # before_script:
+    # - git config --global user.email "hoho1234578@gmail.com"
+    # - git config --global user.name "hoho1234578"
     script: scripts/gen_bundle.sh
 notifications:
   email:
@@ -21,4 +21,4 @@ notifications:
     on_failure: always
 env:
   global:
-  - secure: Xc7Q3AqH/EVqyVtimX1QIDrGxVkOl6kX0EgJiNFGsY8phfdqFl8+2ksRL7RnSG23pHEEUCZ/h/N8OOwwhjxpTaLpwckJpLr5F7jOGNQ4RMtjxTa6HXR7DUq0K2MkpFDFGCjGlZDAaocvJKvNG8gXrEVYqmGGXh7ZdDWqUlGZZbuWuwNRoLyB02aiBFFF+g7XOD8tcM6cZyNsmLoPHbqA4Sdl3WApT754gDQqGbhgZ/lLSK40MaTYMvDBGObEk13KaW5y4Riedo+Wq9yIQu5OQgUIyN0AB7IQbzYrU6KVpvumOPA8kQURdsOv1lFr8WhD5eQ8FIijhOfZqGWB0FxZx9zqdd3/s9gI8t7aKWDjCfr4GhDBbSrjIb3lw8rSfLR+dxDf803W+RSUA86uDFjW3HYXla++qHifcKNI1H5Jf2yeIzUfQ6kaF6bHeDI7ufC3NFdl4SMFNPwKK0XPUGdnBtBMdTZ8pyuXVA5Ahr7PJX5pdDs7u/WeeK6PeAUB8dKBG7syy5WGeXKfRr8OBahU6gQjw30CP4FKcUn09kmzPDvRRyuCVor32pJf3MKpij5y7A7BLPQHo93F16bNdFrKGAetcSBKSN/HdeSdayvR0w0LP+/rWnWTspkxenCksJVNuWfzBdm1hrF6ppzDM3JrazXWElbKW4hpfQH/2UZaloE=
+    secure: GQGZDCh/ZL0hykS9JK1HeKPKSCmOgdaNAtLj52Y0dLfnOcro9d15RI3ew0Sl+J/qZwFF1Ggr9zJ2NYXa0liE7L55ioo2KBHgzQqX1N2IbQV/moi6GxPiyfWQDRREPU4CYUIu+uHYFFzaWzu1g42+CAC+74VDqQdNQqwWUREHieVH7OTEhz0L3IHJlbjdVEKDQgPVJ23C3ZBqQuzrH/lyEoRw1HmPRmftnmQoChAGbSSBykCSG4a+gbAAesLlWHmDia9ELPwVCRhfB/8NCUGKFcEWHxhJ4jGZvajT6usezn/X+UP/6BF6PS0tmKWj3QS79HJYo/xCWPfRSaxg43jY/ssHXGdHbxHqBtidVG+lEwzOxDeWQOj9JgCE7KEQzU3U6q2EPhmqeECRVrE1IenYb+BHm3Tz+pB1FGslTnGc+OsqBaNyAG8s0fCxPjmK7HwzHInsXCeYAqIL4XkrjtUI5twi+JIg4WZ57YM8wFhJrt0pifDuwc8hrNIbkWgF0qZU5xgKo1qY1NyMPDtWrtBV4AnP5fHRLFKnVx292FkNqEYArqDZJEXqp8n6kwqtO2dNH18qR9MAl4kANE3omp1wnPgNZ3HHwQhrhBgOD3rKTPnLYGFzYpgWms4msDsup8jt66wr4FfjPWYSyHk2dluoFAuZdgDbO0ysXPj1Mor/fwc=
